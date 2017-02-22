@@ -9,6 +9,27 @@ class TodoList extends Component {
   state = {
     editVisible: false,
     editTodo: null,
+    sortedList: [],
+  }
+
+  setList = (list) => {
+    if( list && list instanceof Object && Object.keys(list).length > 0 ) {
+      let arr = [];
+      Object.keys(list).forEach(k => arr.push(list[k]));
+      this.setState({
+        sortedList: arr.sort((a,b) => String(b.name).localeCompare(a.name)),
+      });
+    } else {
+      this.setState({sortedList: []});
+    }
+  }
+
+  componentWillMount() {
+    this.setList(this.props.list);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setList(nextProps.list);
   }
 
   onEditCancel = () => {
@@ -20,10 +41,10 @@ class TodoList extends Component {
   }
 
   render() {
-    const {list, todoRemove} = this.props;
-    const {editVisible, editTodo} = this.state;
-
-    if( !list || Object.keys(list).length == 0 ) {
+    const {todoRemove, todoComplete} = this.props;
+    const {editVisible, editTodo, sortedList} = this.state;
+    
+    if( !sortedList || Object.keys(sortedList).length == 0 ) {
       return (
         <Notification>
           Список заданий пуст
@@ -36,7 +57,7 @@ class TodoList extends Component {
           <TodoFormContainer onCancel={this.onEditCancel} todo={editTodo}/>
         }
         <div>
-          {Object.keys(list).map(k => <TodoItem key={k} todo={list[k]} removeTodo={todoRemove} editTodo={this.onEditTodo}/>)}
+          {sortedList.map(todo => <TodoItem key={todo.uid} todo={todo} removeTodo={todoRemove} editTodo={this.onEditTodo} completeTodo={todoComplete}/>)}
         </div>
       </div>
     );

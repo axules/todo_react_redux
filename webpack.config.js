@@ -116,9 +116,9 @@ module.exports = (options = {}) => ({
       }, 
       { 
         test: /\.jsx?$/, 
+        loader: 'babel',
         include: path.resolve('./src'), 
-        exclude: [/node_modules/, /__tests__/, /seo/], 
-        loader: 'babel', 
+        exclude: [/node_modules/, /__tests__/, /seo/],
       }, 
       { 
         test: /\.css$/,  

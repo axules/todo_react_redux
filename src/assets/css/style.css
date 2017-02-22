@@ -49,3 +49,7 @@ body,
 .card_item_remove {
 	background-color: #fff1f1;
 }
+
+.card_item_end {
+	background-color: lightyellow;
+}

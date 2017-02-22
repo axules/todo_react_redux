@@ -8,6 +8,7 @@ class TodoItem extends Component {
   static propTypes = {
     editTodo: React.PropTypes.func.isRequired,
     removeTodo: React.PropTypes.func.isRequired,
+    completeTodo: React.PropTypes.func.isRequired,
     todo: React.PropTypes.object.isRequired,
   }
 
@@ -15,7 +16,10 @@ class TodoItem extends Component {
     this.props.editTodo(this.props.todo);
   }
   onRemove = () => { 
-    //this.props.removeTodo(this.props.todo.uid);
+    this.props.removeTodo(this.props.todo.uid);
+  }
+  onComplete = () => { 
+    this.props.completeTodo(this.props.todo.uid);
   }
 
   openToggle = () => {
@@ -29,7 +33,7 @@ class TodoItem extends Component {
       <div className="card">
         <header className="card-header todo_item_header" onClick={this.openToggle}>
           <p className="card-header-title">
-            {todo.name}
+            {todo.name} {todo.state == 9 && ' (Завершено)'}
           </p>
         </header>
         {opened && 
@@ -42,6 +46,7 @@ class TodoItem extends Component {
             {todo.state < 9 &&
               <footer className="card-footer">
                 <a className="card-footer-item card_item_edit" onClick={this.onEdit}>Изменить</a>
+                <a className="card-footer-item card_item_end" onClick={this.onComplete}>Завершить</a>
                 <a className="card-footer-item card_item_remove" onClick={this.onRemove}>Удалить</a>
               </footer>
             }
