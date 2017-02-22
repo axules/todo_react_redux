@@ -1,5 +1,3 @@
-## Frontend приточки
-
 ## Стек используемых технологий
 
 Вам потребуется установить на ваш компьютер
@@ -12,12 +10,8 @@
 
 ## Установка
 
-* `git clone ssh://`
+* `git clone https://github.com/axules/todo_wiley.git`
 * `npm install`
-
-### Переменные окружения
-
-* `NODE_ENV=development` или `NODE_ENV=production`
 
 ### Сборка проекта
 
