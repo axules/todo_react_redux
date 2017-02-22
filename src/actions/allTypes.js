@@ -1,5 +1,8 @@
 const types = {
-  
+  TODO_ADD: 'TODO_ADD',
+  TODO_SAVE: 'TODO_SAVE',
+  TODO_REMOVE: 'TODO_REMOVE',
+  TODO_COMPLETE: 'TODO_COMPLETE',
 };
 
 export default types;
