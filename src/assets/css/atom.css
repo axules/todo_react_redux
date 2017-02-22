@@ -1,0 +1,238 @@
+/*--- Вспомогательные атомарные стили ---*/
+/* #fccf00 - желтый брендовый */
+
+/* Очищение */
+.cf {*zoom: 1;}
+.cf:before,
+.cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+
+/* Кегль */
+.fs12{font-size: 12px;}
+.fs14{font-size: 14px;}
+.fs16{font-size: 16px;}
+.fs18{font-size: 18px;}
+.fs20{font-size: 20px;}
+.fs22{font-size: 22px;}
+.fs24{font-size: 24px;}
+.fs26{font-size: 26px;}
+.fs28{font-size: 28px;}
+.fs30{font-size: 30px;}
+.fs36{font-size: 36px;}
+.fs40{font-size: 40px;}
+.fs42{font-size: 42px;}
+
+/* Сабтитлы */
+.s60{font-size: 60%;}
+.s70{font-size: 70%;}
+.s80{font-size: 80%;}
+
+/* Форматирование текста */
+.upper{text-transform: uppercase;}
+.lower{text-transform: lowercase;}
+.nowrap{white-space: nowrap !important;}
+.bold{font-weight: 600;}
+.norm{font-weight: normal;}
+.through{text-decoration:line-through;}
+.elipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* Высота строки */
+.lh130{line-height: 130%;}
+.lh150{line-height: 150%;}
+.lhn{line-height: normal;}
+.lh32{line-height: 32px;}
+
+/* Цвет текста */
+.color{color: #fccf00;}
+.c_black{color: #000 !important;}
+.c_white{color: #fff;}
+.c_blue{color: #0089ec;}
+.c_gray{color: #777;}
+
+/* Выравнивание текста */
+.tac{text-align: center;}
+.tar{text-align: right;}
+.tal{text-align: left;}
+
+/* Очищение margin */
+.ma{margin: 0 auto;}
+.mn{margin: 0 !important;}
+.mtn{margin-top: 0 !important;}
+.mbn{margin-bottom: 0 !important;}
+.mrn{margin-right: 0 !important;}
+.mln{margin-left: 0 !important;}
+
+/* Абсолютные внешние отступы */
+.mt4{margin-top: 4px;}
+.mt10{margin-top: 10px;}
+.mt20{margin-top: 20px !important;}
+.mt30{margin-top: 30px}
+.mt40{margin-top: 40px;}
+.mt50{margin-top: 50px;}
+
+.mb10{margin-bottom: 10px;}
+.mb20{margin-bottom: 20px;}
+.mb30{margin-bottom: 30px;}
+.mb40{margin-bottom: 40px;}
+.mb50{margin-bottom: 50px;}
+
+.mg10{
+    margin-left: 10px; 
+    margin-right: 10px;
+} 
+    /* справа и слева (mh - min-height) */
+.mv10{
+    margin-top: 10px !important; 
+    margin-bottom: 10px !important;
+    } /*Вертикальный сверху и снизу*/
+.ml5{margin-left: 5px;}
+.mr5{margin-right: 5px;}
+.mr10{margin-right: 10px;}
+.m10{margin: 10px;}
+.mvn{margin-top: 0; margin-bottom: 0;}
+.mgn{margin-left: 0; margin-right: 0;}
+
+/* Очищение padding */
+.pn{padding: 0 !important;}
+.ptn{padding-top: 0 !important;}
+.pbn{padding-bottom: 0 !important;}
+.prn{padding-right: 0 !important;}
+.pln{padding-left: 0 !important;}
+.pvn{
+    padding-top: 0 !important; 
+    padding-bottom: 0 !important;
+}
+
+/* Абсолютные внутренние отступы */
+.p10{padding: 10px;}
+.p20{padding: 20px;}
+
+.pt10{padding-top: 10px;}
+.pr5{padding-right: 5px;}
+
+.pr10{padding-right: 10px;}
+.pr30{padding-right: 30px;}
+.pr40{padding-right: 40px;}
+.pr45{padding-right: 45px;}
+
+.pb10{padding-bottom: 10px;}
+.pb20{padding-bottom: 20px;}
+.pb30{padding-bottom: 30px;}
+.pb40{padding-bottom: 40px;}
+.pb50{padding-bottom: 50px;}
+
+
+.pl5{padding-left: 5px;}
+.pl110{padding-left: 110px;}
+
+.pg5{padding-left: 5px; padding-right: 5px;}
+.pg10{padding-left: 10px; padding-right: 10px;}
+.pg20{padding-left: 20px; padding-right: 20px;}
+
+.pv10{padding-top: 10px;padding-bottom: 10px;}
+.pv20{padding-top: 20px;padding-bottom: 20px;}
+
+
+/* Ссылки */
+.dashed,
+.dashed:link,
+.dashed:visited{
+    text-decoration: none;
+    border-bottom: 1px dashed #777;
+    color: inherit;
+}
+.dashed:hover,
+.dashed:focus{
+    border-bottom: none;
+}
+
+.cp{cursor: pointer;}
+
+/* Очищение стилей ссылки */
+a.inherit:link,
+a.inherit:visited{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    border-bottom: none;
+}
+/* Размеры */
+.full{width: 100% !important;}
+.half{width: 50%;}
+
+/* Абсолютные размеры */
+.h100{height: 200px;}
+.w40{width: 40px;}
+.w100{width: 100px;}
+.w150{width: 150px;}
+.wh32{width: 32px; height: 32px;}
+.wh24{width: 24px; height: 24px;}
+
+
+/* Отображение */
+.db{display: block;}
+.dn{display: none;}
+.dni{display: none !important;}
+.dib{display: inline-block;vertical-align: top;}
+.di{display: inline;}
+
+/* Вертикальное выравнивание */
+.vam{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Обтекание */
+.fl{float: left;}
+.fr{float: right;}
+.fn{float: none;}
+
+/* Позиционирование */
+.pr{position: relative;}
+.pa{position: absolute;}
+
+.rn{right: 0 !important;}
+
+/* Списки */
+.list_disc{
+    list-style: disc;
+    margin-left: 20px;
+}
+.t0{
+    transform: translateZ(0) !important;
+    -moz-transform: translateZ(0) !important; /* Для Firefox */
+    -ms-transform: translateZ(0) !important; /* Для IE */
+    -webkit-transform: translateZ(0) !important; /* Для Safari, Chrome, iOS */
+    -o-transform: translateZ(0) !important; /* Для Opera */
+}
+.shadow{
+    box-shadow: 0 4px 6px -2px rgba(0,0,0,.2);
+}
+
+/* Таблицы */
+
+.cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Обрезка */
+.oh{overflow: hidden;}
+
+/* Обводка */
+.bn{border: none !important;}
+.border_bottom{
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.z5{
+    z-index: 5;
+}
+.bg9{background: #999;}
+.bgw{background: #fff}
+
+

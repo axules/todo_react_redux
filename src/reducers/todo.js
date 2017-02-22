@@ -1,0 +1,12 @@
+import types from '../actions/allTypes';
+
+const initState = {
+  
+};
+
+export default (state = initState, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};

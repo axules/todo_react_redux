@@ -1,0 +1,71 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "babel",
+        "react",
+        "promise"
+    ],
+    "rules": {
+        "no-debugger": 1,
+        "no-empty": 0,
+        "indent": [
+            "error",
+            2,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always",
+            {
+                "omitLastInOneLineBlock": true
+            }
+        ],
+        "no-unused-vars": [
+            "warn"
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "log",
+                    "info",
+                    "warn",
+                    "error",
+                    "debug",
+                    "group",
+                    "groupEnd"
+                ]
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "callback-return": "error",
+        "react/prop-types": [
+            0,
+            {}
+        ]
+    },
+    "globals": {
+        "fetch": true,
+        "module": true,
+        "require": true,
+        "process": true,
+        "promise":true,
+        "Promise":true
+    }
+}
